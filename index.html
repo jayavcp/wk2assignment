@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="./app.js" defer></script>
-    <title>assignment practise</title>
+    <title>Week 2 Assignment</title>
   </head>
   <body>
     <header>
       <h1>Cookie Clicker</h1>
-      <p><strong>You need a glass of milk for this...</strong></p>
+      <p>
+        <strong
+          ><a href="https://en.wikipedia.org/wiki/Got_Milk%3F"
+            >got milk?</a
+          ></strong
+        >
+      </p>
     </header>
     <div class="container">
-      CLICK FOR A COOKIE <img src="cookiePNG1.webp" alt="choc chip cookie" />
+      CLICK THE COOKIE >>>
+      <img src="cookiePNG1.webp" alt="choc chip cookie" />
     </div>
-
+    <div id="errorMessage" style="display: none">Fresh out of cookie dough</div>
     <button id="cookieBtn">Get Cookie</button>
     <button id="upgradeBtn">
       Get Upgrade for low price of <span id="upgradeCost"> 0 </span>
       cookies
     </button>
+    <button id="resetBtn"><i>START AGAIN</i></button>
     <p>Cookies: <span id="cookiesSpan">0</span></p>
     <p>Cookies Per Second: <span id="cpsSpan">0</span></p>
     <div>

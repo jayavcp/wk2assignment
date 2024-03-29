@@ -6,6 +6,8 @@ const upgradeBtn = document.getElementById("upgradeBtn");
 const upgradeCost = document.getElementById("upgradeCost");
 const cookiesSpan = document.getElementById("cookiesSpan");
 const cpsSpan = document.getElementById("cpsSpan");
+const resetBtn = document.getElementById("resetBtn");
+const errorMessage = document.getElementById("errorMessage");
 
 // default starting value for stats
 const stats = {
@@ -29,10 +31,17 @@ function buyCookie() {
 }
 
 function buyUpgrade() {
-  stats.cookieCount = stats.cookieCount - stats.cps * 5;
-  stats.cps++;
-  updatePage();
-  updateStorage();
+  if (stats.cookieCount >= stats.cps * 5) {
+    stats.cookieCount = stats.cookieCount - stats.cps * 5;
+    stats.cps++;
+    updatePage();
+    updateStorage();
+  } else {
+    (errorMessage.style.display = "block"),
+      setTimeout(() => {
+        errorMessage.style.display = "none";
+      }, 3000);
+  }
 }
 
 function updatePage() {
@@ -45,13 +54,22 @@ function updateStorage() {
   localStorage.setItem("stats", JSON.stringify(stats));
 }
 
+function reset() {
+  stats.cookieCount = 0;
+  stats.cps = 0;
+  updatePage();
+  updateStorage();
+}
+
 cookieBtn.addEventListener("click", buyCookie);
 imgBtn.addEventListener("click", buyCookie);
 upgradeBtn.addEventListener("click", buyUpgrade);
+resetBtn.addEventListener("click", reset); //adding in reset button click event
 
 // start the timer that runs every second forever
 setInterval(function () {
   stats.cookieCount += stats.cps;
+  console.log("🍪", stats.cookieCount);
   updatePage();
   updateStorage();
 }, 1000);
