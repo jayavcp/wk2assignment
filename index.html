@@ -4,32 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./app.js"></script>
-    <title>Wk 2 Assignment cookie clicker</title>
+    <script src="./app.js" defer></script>
+    <title>assignment practise</title>
   </head>
   <body>
-    <!-------------------------------- HEADER --------------------------->
     <header>
       <h1>Cookie Clicker</h1>
-      <p><strong>You might need a glass of milk with this...</strong></p>
+      <p><strong>You need a glass of milk for this...</strong></p>
     </header>
-    <!------------------------------ MAIN ---------------------------->
-    <main>
-      <img
-        id="cookieBtn"
-        class="button"
-        src="cookiePNG1.webp"
-        alt="choc chip cookie"
-      />
-      <!-- <button id="cookie" class="button">Take a cookie</button> -->
-      <button id="cps" class="upgradebutton">Cookies per second upgrade</button>
-    </main>
-    <!------------------------------- FOOTER ----------------------------->
-    <footer>
-      <div>
-        Subscribe for the hottest cookie news delivered to your inbox!
-        <input type="email" placeholder="email address" />
-      </div>
-    </footer>
+    <div class="container">
+      CLICK FOR A COOKIE <img src="cookiePNG1.webp" alt="choc chip cookie" />
+    </div>
+
+    <button id="cookieBtn">Get Cookie</button>
+    <button id="upgradeBtn">
+      Get Upgrade for low price of <span id="upgradeCost"> 0 </span>
+      cookies
+    </button>
+    <p>Cookies: <span id="cookiesSpan">0</span></p>
+    <p>Cookies Per Second: <span id="cpsSpan">0</span></p>
+    <div>
+      Subscribe for the hottest cookie news delivered to your inbox!
+      <input type="email" placeholder="email address" />
+    </div>
   </body>
 </html>

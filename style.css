@@ -1,10 +1,21 @@
-main {
-  padding-top: 50px;
-  padding-bottom: 50px;
+button {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.button:hover {
+
+.container {
+  display: flex;
+  height: 200px;
+  width: 200px;
+}
+
+img,
+button:hover {
   cursor: grab;
 }
-img {
-  background-color: aqua;
+
+#upgradeCost {
+  color: red;
+  font-weight: bold;
 }
