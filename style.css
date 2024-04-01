@@ -1,6 +1,5 @@
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: sans-serif;
 }
 button {
   display: flex;
@@ -14,10 +13,13 @@ button {
   width: 200px;
 }
 
-img:hover,
-button:hover {
+img:hover {
   cursor: grab;
   background-color: blanchedalmond;
+}
+
+button:hover {
+  background-color: chocolate;
 }
 
 #upgradeCost {
@@ -37,4 +39,27 @@ button:hover {
   font-weight: bolder;
   font-size: x-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+form button {
+  max-width: fit-content;
+  margin: 0px;
+}
+
+input {
+  max-width: 500px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }

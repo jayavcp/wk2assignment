@@ -10,6 +10,10 @@
   <body>
     <header>
       <h1>Cookie Clicker</h1>
+    </header>
+    <div class="container">
+      CLICK THE COOKIE >>>
+      <img src="cookiePNG1.webp" alt="choc chip cookie" />
       <p>
         <strong
           ><a href="https://en.wikipedia.org/wiki/Got_Milk%3F"
@@ -17,23 +21,30 @@
           ></strong
         >
       </p>
-    </header>
-    <div class="container">
-      CLICK THE COOKIE >>>
-      <img src="cookiePNG1.webp" alt="choc chip cookie" />
     </div>
     <div id="errorMessage" style="display: none">Fresh out of cookie dough</div>
-    <button id="cookieBtn">Get Cookie</button>
+    <button id="cookieBtn">Click here for a cookie</button>
     <button id="upgradeBtn">
-      Get Upgrade for low price of <span id="upgradeCost"> 0 </span>
-      cookies
+      Get Upgrade for low price of &nbsp; <span id="upgradeCost"> 0 </span>
+      &nbsp; cookies
     </button>
-    <button id="resetBtn"><i>START AGAIN</i></button>
     <p>Cookies: <span id="cookiesSpan">0</span></p>
     <p>Cookies Per Second: <span id="cpsSpan">0</span></p>
-    <div>
-      Subscribe for the hottest cookie news delivered to your inbox!
-      <input type="email" placeholder="email address" />
-    </div>
+    <button id="resetBtn"><i>START AGAIN</i></button>
+    <form>
+      <!-- adding a label with for value to match input ID for accessibility -->
+      <label for="email">
+        Subscribe to our mailing list for the hottest cookie news:
+      </label>
+
+      <input
+        name="email"
+        type="email"
+        placeholder=" Enter your email address"
+        id="email"
+      />
+      <button>Submit</button>
+    </form>
+    <footer>Copyright &copy; 2024 Cookie Clicker</footer>
   </body>
 </html>
